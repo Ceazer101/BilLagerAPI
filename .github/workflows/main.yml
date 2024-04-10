@@ -27,7 +27,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
       with:
-        images: bjand49/dls:latest
+        images: bjand49/dls
         
     - name: Push Docker image
-      run: docker push bjand49/dls:latest
+      run: docker push bjand49/dls
