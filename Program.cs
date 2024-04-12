@@ -22,7 +22,7 @@ namespace BilLagerAPI
             CarContext context = new CarContext();
 
             CarInventory carInventory = new CarInventory(context);
-            carInventory.CreateStandardCars();
+            //carInventory.CreateStandardCars();
 
             List<StandardCar> standardCars = carInventory.GetStandardCars();
 
@@ -31,6 +31,8 @@ namespace BilLagerAPI
                 Console.WriteLine($"Model: {car.Name}, Color: {car.Color}");Console.WriteLine($"Id: {car.Id}, Name: {car.Name}, Type: {car.Type}, Color: {car.Color}, Battery: {car.Battery}, Hitch: {car.Hitch}");
             }
             
+            RabbitMQService rabbitMQService = new RabbitMQService("5672", "test_queue", "guest", "guest");
+            rabbitMQService.SendMessage("Hello, RabbitMQ!");
         }
     }
 }
