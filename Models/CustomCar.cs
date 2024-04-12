@@ -10,7 +10,7 @@ namespace BilLagerAPI.Models
         public string Color { get; set; } = "";
         public string Battery { get; set; } = "";
         public bool Hitch;
-        //public List<PartType> Parts { get; set; } = new List<PartType>(); 
+        public List<PartType> Parts { get; set; } = new List<PartType>(); 
     }
 
     /*public class Part

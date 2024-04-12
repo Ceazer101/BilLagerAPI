@@ -20,10 +20,10 @@ namespace BilLagerAPI
             databaseConnector.Connect();
 
             CarContext context = new CarContext();
-            CarOrder carOrder = new CarOrder(context);
-            
 
             CarInventory carInventory = new CarInventory(context);
+            carInventory.CreateStandardCars();
+
             List<StandardCar> standardCars = carInventory.GetStandardCars();
 
             foreach (StandardCar car in standardCars)
