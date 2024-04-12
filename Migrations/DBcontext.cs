@@ -5,7 +5,8 @@ namespace BilLagerAPI.Data
 {
     public class CarContext : DbContext
     {
-        public DbSet<Car> Cars { get; set; }
+        public DbSet<StandardCar> StandardCars { get; set; }
+        public DbSet<CustomCar> CustomCars { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

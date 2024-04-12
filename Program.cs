@@ -21,12 +21,12 @@ namespace BilLagerAPI
 
             CarContext context = new CarContext();
             CarOrder carOrder = new CarOrder(context);
-            //carOrder.CreateCars();
+            
 
             CarInventory carInventory = new CarInventory(context);
-            List<Car> cars = carInventory.GetCars();
+            List<StandardCar> standardCars = carInventory.GetStandardCars();
 
-            foreach (Car car in cars)
+            foreach (StandardCar car in standardCars)
             {
                 Console.WriteLine($"Model: {car.Name}, Color: {car.Color}");Console.WriteLine($"Id: {car.Id}, Name: {car.Name}, Type: {car.Type}, Color: {car.Color}, Battery: {car.Battery}, Hitch: {car.Hitch}");
             }

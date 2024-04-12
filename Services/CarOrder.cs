@@ -12,26 +12,28 @@ namespace BilLagerAPI.Services {
         }
 
         public void CreateCars() {
-            Car car1 = new Car{
+            StandardCar car1 = new StandardCar{
                 Id = 3,
-                Name = "SUV, White X",
+                Name = "SUV-X, White",
+                Quantity = 9,
                 Type = CarType.SUV,
                 Color = "White",
                 Battery = "50kW",
                 Hitch = true
             };
 
-            Car car2 = new Car{
+            StandardCar car2 = new StandardCar{
                 Id = 4,
                 Name = "Sport-Y",
+                Quantity = 5,
                 Type = CarType.Sport,
                 Color = "Red",
                 Battery = "100kW",
                 Hitch = false
             };
 
-            _context.Cars.Add(car1);
-            _context.Cars.Add(car2);
+            _context.StandardCars.Add(car1);
+            _context.StandardCars.Add(car2);
 
             _context.SaveChanges();
         }
