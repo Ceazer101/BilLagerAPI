@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using BilLagerAPI.Services; 
 using BilLagerAPI.Data; 
 using BilLagerAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BilLagerAPI
 {
@@ -23,15 +24,21 @@ namespace BilLagerAPI
 
             CarInventory carInventory = new CarInventory(context);
             //carInventory.CreateStandardCars();
+            var missingMigrations = context.Database.GetPendingMigrations();
+            if (missingMigrations.Any())
 
+            {
+
+                context.Database.Migrate();
+
+            }
             List<StandardCar> standardCars = carInventory.GetStandardCars();
-
             foreach (StandardCar car in standardCars)
             {
                 Console.WriteLine($"Model: {car.Name}, Color: {car.Color}");Console.WriteLine($"Id: {car.Id}, Name: {car.Name}, Type: {car.Type}, Color: {car.Color}, Battery: {car.Battery}, Hitch: {car.Hitch}");
             }
             
-            RabbitMQService rabbitMQService = new RabbitMQService("5672", "test_queue", "guest", "guest");
+            RabbitMQService rabbitMQService = new RabbitMQService("host.docker.internal", "test_queue", "guest", "guest");
             rabbitMQService.SendMessage("Hello, RabbitMQ!");
         }
     }

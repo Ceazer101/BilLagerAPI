@@ -10,7 +10,7 @@ namespace BilLagerAPI.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=BilLagerDB;User Id=postgres;Password=testtest;");
+            optionsBuilder.UseNpgsql("Host=host.docker.internal;Port=5432;Database=BilLagerDB;Username=guest;Password=guest;");
         }
     }
 }

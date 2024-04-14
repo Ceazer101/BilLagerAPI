@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BilLagerAPI.Migrations
 {
     [DbContext(typeof(CarContext))]
-    [Migration("20240412202221_CreateCustomCars")]
-    partial class CreateCustomCars
+    [Migration("20240414130910_testmigration")]
+    partial class testmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
