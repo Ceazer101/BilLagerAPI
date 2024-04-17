@@ -14,6 +14,7 @@ internal class Program
         var configuration = builder.Configuration;
 
         builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddTransient<ICarController, CarController>();
         builder.Services.AddDbContext<CarContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
         builder.Services.AddSwaggerGen();
@@ -24,7 +25,10 @@ internal class Program
             db.Database.Migrate();
         }
         app.UseRouting();
-        app.MapGet("/", () => "Hello World!");
+        app.MapGet("/GetStandardCars", (ICarController carController) =>
+        {
+            carController.GetStandardCars(); 
+        });
         app.UseSwagger();
         app.UseSwaggerUI();
 

@@ -4,10 +4,12 @@ using System.Collections.Generic;
 
 namespace BilLagerAPI.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class CarController : ControllerBase
+
+    public class CarController : ControllerBase, ICarController
     {
-        
+        public void GetStandardCars()
+        {
+            
+        }
     }
 }
