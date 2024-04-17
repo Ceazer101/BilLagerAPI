@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BilLagerAPI.Models
+namespace CarStorageAPI.Models
 {
     public class StandardCar
     {
@@ -16,8 +16,8 @@ namespace BilLagerAPI.Models
 
     public enum CarType
     {
-        SUV,
-        Sport
+        SUV = 1,
+        Sport = 2
     }
 
 }

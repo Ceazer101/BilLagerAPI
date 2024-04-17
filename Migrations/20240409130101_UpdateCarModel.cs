@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace BilLagerAPI.Migrations
+namespace CarStorageAPI.Migrations
 {
     public partial class UpdateCarModel : Migration
     {

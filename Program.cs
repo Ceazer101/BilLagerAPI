@@ -1,6 +1,8 @@
-using BilLagerAPI.Controllers;
-using BilLagerAPI.Data;
-using BilLagerAPI.Models;
+using CarStorageApi.Repositories;
+using CarStorageApi.Services;
+using CarStorageAPI.Controllers;
+using CarStorageAPI.Data;
+using CarStorageAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -15,6 +17,8 @@ internal class Program
 
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddTransient<ICarController, CarController>();
+        builder.Services.AddTransient<ICarService, CarService>();
+        builder.Services.AddTransient<ICarRepository, CarRepository>();
         builder.Services.AddDbContext<CarContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
         builder.Services.AddSwaggerGen();

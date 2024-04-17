@@ -1,6 +1,6 @@
-﻿namespace BilLagerAPI.Controllers
+﻿namespace CarStorageAPI.Controllers
 {
-    internal interface ICarController
+    public interface ICarController
     {
         public void GetStandardCars();
     }

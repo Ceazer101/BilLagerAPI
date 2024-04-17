@@ -1,5 +1,5 @@
 
-namespace BilLagerAPI.Models
+namespace CarStorageAPI.Models
 {
     public class CustomCar
     {

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using BilLagerAPI.Models;
+using CarStorageAPI.Models;
 
-namespace BilLagerAPI.Data
+namespace CarStorageAPI.Data
 {
     public class CarContext : DbContext
     {

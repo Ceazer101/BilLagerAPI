@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace BilLagerAPI.Migrations
+namespace CarStorageAPI.Migrations
 {
     public partial class CreateCarsTable : Migration
     {
