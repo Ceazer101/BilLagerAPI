@@ -12,9 +12,9 @@ namespace CarStorageApi.Services
             _carInventoryRepo = carInventoryRepo;
         }
 
-        public void GetStandardCars()
+        public void GetCars()
         {
-            _carInventoryRepo.GetStandardCars();
+            _carInventoryRepo.GetCars();
         }
         
     }

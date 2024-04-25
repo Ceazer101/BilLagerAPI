@@ -29,9 +29,9 @@ internal class Program
             db.Database.Migrate();
         }
         app.UseRouting();
-        app.MapGet("/GetStandardCars", (ICarController carController) =>
+        app.MapGet("/GetCars", (ICarController carController) =>
         {
-            carController.GetStandardCars(); 
+            carController.GetCars(); 
         });
         app.UseSwagger();
         app.UseSwaggerUI();

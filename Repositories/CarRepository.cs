@@ -13,14 +13,9 @@ namespace CarStorageApi.Repositories
             _context = context;
         }
 
-        public List<StandardCar> GetStandardCars()
+        public List<Car> GetCars()
         {
-            return _context.StandardCars.ToList();
-        }
-
-        public List<CustomCar> GetCustomCars()
-        {
-            return _context.CustomCars.ToList();
+            return _context.Cars.ToList();
         }
 
     }

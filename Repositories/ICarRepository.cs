@@ -4,6 +4,6 @@ namespace CarStorageApi.Repositories
 {
     public interface ICarRepository
     {
-        public List<StandardCar> GetStandardCars();
+        public List<Car> GetCars();
     }
 }

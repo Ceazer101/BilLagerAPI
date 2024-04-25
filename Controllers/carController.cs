@@ -12,9 +12,9 @@ namespace CarStorageAPI.Controllers
             _carService = carService;
         }
 
-        public void GetStandardCars()
+        public void GetCars()
         {
-            _carService.GetStandardCars();
+            _carService.GetCars();
         }
     }
 }

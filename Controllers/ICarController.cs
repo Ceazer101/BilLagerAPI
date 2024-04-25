@@ -2,6 +2,6 @@
 {
     public interface ICarController
     {
-        public void GetStandardCars();
+        public void GetCars();
     }
 }

@@ -5,8 +5,7 @@ namespace CarStorageAPI.Data
 {
     public class CarContext : DbContext
     {
-        public DbSet<StandardCar> StandardCars { get; set; }
-        public DbSet<CustomCar> CustomCars { get; set; }
+        public DbSet<Car> Cars { get; set; }
         public CarContext(DbContextOptions options) : base(options) { }
     }
 }
