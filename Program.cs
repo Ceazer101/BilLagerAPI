@@ -1,6 +1,8 @@
-using BilLagerAPI.Controllers;
-using BilLagerAPI.Data;
-using BilLagerAPI.Models;
+using CarStorageApi.Repositories;
+using CarStorageApi.Services;
+using CarStorageApi.Controllers;
+using CarStorageApi.Data;
+using CarStorageApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -15,19 +17,22 @@ internal class Program
 
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddTransient<ICarController, CarController>();
+        builder.Services.AddTransient<ICarService, CarService>();
+        builder.Services.AddTransient<ICarRepository, CarRepository>();
         builder.Services.AddDbContext<CarContext>(options =>
-            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
         builder.Services.AddSwaggerGen();
         var app = builder.Build();
+        var temp = configuration.GetConnectionString("DefaultConnection");
         using (var scope = app.Services.CreateScope())
         {
             var db = scope.ServiceProvider.GetRequiredService<CarContext>();
             db.Database.Migrate();
         }
         app.UseRouting();
-        app.MapGet("/GetStandardCars", (ICarController carController) =>
+        app.MapGet("/GetCars", (ICarController carController) =>
         {
-            carController.GetStandardCars(); 
+            carController.GetCars(); 
         });
         app.UseSwagger();
         app.UseSwaggerUI();

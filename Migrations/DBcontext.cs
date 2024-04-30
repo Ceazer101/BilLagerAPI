@@ -1,12 +1,12 @@
 using Microsoft.EntityFrameworkCore;
-using BilLagerAPI.Models;
+using CarStorageApi.Models;
 
-namespace BilLagerAPI.Data
+namespace CarStorageApi.Data
 {
     public class CarContext : DbContext
     {
-        public DbSet<StandardCar> StandardCars { get; set; }
-        public DbSet<CustomCar> CustomCars { get; set; }
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<Part> Parts { get; set; }
         public CarContext(DbContextOptions options) : base(options) { }
     }
 }

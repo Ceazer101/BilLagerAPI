@@ -1,15 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
-using BilLagerAPI.Models;
-using System.Collections.Generic;
+using CarStorageApi.Services;
 
-namespace BilLagerAPI.Controllers
+namespace CarStorageApi.Controllers
 {
 
-    public class CarController : ControllerBase, ICarController
+    public class CarController: ICarController
     {
-        public void GetStandardCars()
+        private ICarService _carService;
+        public CarController(ICarService carService) 
         {
-            
+            _carService = carService;
+        }
+
+        public void GetCars()
+        {
+            _carService.GetCars();
         }
     }
 }
