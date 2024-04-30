@@ -9,6 +9,6 @@ namespace CarStorageApi.Models
         public string Name { get; set; } = "";
         public string Type { get; set; }
         public string Color { get; set; } = "";
-        public List<Part> Part { get; set; } = new List<Part>();
+        public virtual List<Part> Part { get; set; } = new List<Part>();
     }
 }

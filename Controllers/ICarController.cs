@@ -1,7 +1,9 @@
-﻿namespace CarStorageApi.Controllers
+﻿using CarStorageApi.Models;
+
+namespace CarStorageApi.Controllers
 {
     public interface ICarController
     {
-        public void GetCars();
+        public List<Car> GetCars();
     }
 }
