@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using CarStorageApi.Services;
 
-namespace CarStorageAPI.Controllers
+namespace CarStorageApi.Controllers
 {
 
     public class CarController: ICarController

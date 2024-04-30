@@ -1,5 +1,5 @@
 ﻿using CarStorageApi.Repositories;
-using CarStorageAPI.Models;
+using CarStorageApi.Models;
 
 namespace CarStorageApi.Services
 {
@@ -16,6 +16,5 @@ namespace CarStorageApi.Services
         {
             _carInventoryRepo.GetCars();
         }
-        
     }
 }

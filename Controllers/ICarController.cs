@@ -1,4 +1,4 @@
-﻿namespace CarStorageAPI.Controllers
+﻿namespace CarStorageApi.Controllers
 {
     public interface ICarController
     {

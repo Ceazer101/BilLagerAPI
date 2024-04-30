@@ -1,4 +1,4 @@
-﻿using CarStorageAPI.Models;
+﻿using CarStorageApi.Models;
 
 namespace CarStorageApi.Repositories
 {
