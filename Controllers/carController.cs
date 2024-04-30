@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using CarStorageApi.Services;
+using CarStorageApi.Models;
 
 namespace CarStorageApi.Controllers
 {
@@ -12,9 +13,9 @@ namespace CarStorageApi.Controllers
             _carService = carService;
         }
 
-        public void GetCars()
+        public List<Car> GetCars()
         {
-            _carService.GetCars();
+            return _carService.GetCars();
         }
     }
 }

@@ -32,7 +32,7 @@ internal class Program
         app.UseRouting();
         app.MapGet("/GetCars", (ICarController carController) =>
         {
-            carController.GetCars(); 
+            return carController.GetCars(); 
         });
         app.UseSwagger();
         app.UseSwaggerUI();

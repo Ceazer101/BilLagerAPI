@@ -1,7 +1,9 @@
-﻿namespace CarStorageApi.Services
+﻿using CarStorageApi.Models;
+
+namespace CarStorageApi.Services
 {
     public interface ICarService
     {
-        public void GetCars();
+        public List<Car> GetCars();
     }
 }
