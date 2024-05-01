@@ -6,6 +6,9 @@ using CarStorageApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.Text;
+using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
 
 internal class Program
 {
@@ -19,6 +22,7 @@ internal class Program
         builder.Services.AddTransient<ICarController, CarController>();
         builder.Services.AddTransient<ICarService, CarService>();
         builder.Services.AddTransient<ICarRepository, CarRepository>();
+        builder.Services.AddTransient<RabbitMQService>();
         builder.Services.AddDbContext<CarContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
         builder.Services.AddSwaggerGen();
@@ -27,7 +31,7 @@ internal class Program
         using (var scope = app.Services.CreateScope())
         {
             var db = scope.ServiceProvider.GetRequiredService<CarContext>();
-            db.Database.Migrate();
+            //db.Database.Migrate();
         }
         app.UseRouting();
         app.MapGet("/GetCars", (ICarController carController) =>
@@ -36,6 +40,15 @@ internal class Program
         });
         app.UseSwagger();
         app.UseSwaggerUI();
+
+        // RabbitMQ
+
+        app.MapGet("/Receive", (RabbitMQService rabbitMQSender, ICarController carController) =>
+        {
+            var cars = carController.GetCars();
+            rabbitMQSender.Publish(cars);
+            return "Received";
+        });
 
         app.Run();
     }
