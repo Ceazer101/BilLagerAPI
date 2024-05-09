@@ -6,13 +6,32 @@ using CarStorageApi.Models;
 
 namespace CarStorageApi.Services
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class RabbitMQService
     {
+        /// <summary>
+        /// The connection
+        /// </summary>
         private readonly IConnection _connection;
+        /// <summary>
+        /// The channel
+        /// </summary>
         private readonly IModel _channel;
+        /// <summary>
+        /// The factory
+        /// </summary>
         private readonly ConnectionFactory _factory;
+        /// <summary>
+        /// The rabbit mq configuration
+        /// </summary>
         private readonly IConfigurationSection _rabbitMQConfig;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RabbitMQService"/> class.
+        /// </summary>
+        /// <param name="configuration">The configuration.</param>
         public RabbitMQService(IConfiguration configuration)
         {
             _rabbitMQConfig = configuration.GetSection("RabbitMQ");
@@ -24,6 +43,10 @@ namespace CarStorageApi.Services
             };
         }
 
+        /// <summary>
+        /// Publishes the specified cars.
+        /// </summary>
+        /// <param name="cars">The cars.</param>
         public void Publish(List<Car> cars)
         {
             using (var connection = _factory.CreateConnection())

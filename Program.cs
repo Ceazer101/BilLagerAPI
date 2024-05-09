@@ -10,8 +10,15 @@ using System.Text;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
+/// <summary>
+/// 
+/// </summary>
 internal class Program
 {
+    /// <summary>
+    /// Defines the entry point of the application.
+    /// </summary>
+    /// <param name="args">The arguments.</param>
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
@@ -27,11 +34,10 @@ internal class Program
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
         builder.Services.AddSwaggerGen();
         var app = builder.Build();
-        var temp = configuration.GetConnectionString("DefaultConnection");
         using (var scope = app.Services.CreateScope())
         {
             var db = scope.ServiceProvider.GetRequiredService<CarContext>();
-            //db.Database.Migrate();
+            db.Database.Migrate();
         }
         app.UseRouting();
         app.MapGet("/GetCars", (ICarController carController) =>
@@ -42,7 +48,6 @@ internal class Program
         app.UseSwaggerUI();
 
         // RabbitMQ
-
         app.MapGet("/Receive", (RabbitMQService rabbitMQSender, ICarController carController) =>
         {
             var cars = carController.GetCars();
