@@ -23,7 +23,7 @@ items:
     remote:
       path: Models/Car.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: Car
     path: Models/Car.cs
     startLine: 8
@@ -60,7 +60,7 @@ items:
     remote:
       path: Models/Car.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: Id
     path: Models/Car.cs
     startLine: 16
@@ -92,7 +92,7 @@ items:
     remote:
       path: Models/Car.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: Name
     path: Models/Car.cs
     startLine: 23
@@ -124,7 +124,7 @@ items:
     remote:
       path: Models/Car.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: Type
     path: Models/Car.cs
     startLine: 30
@@ -156,7 +156,7 @@ items:
     remote:
       path: Models/Car.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: Color
     path: Models/Car.cs
     startLine: 37
@@ -188,7 +188,7 @@ items:
     remote:
       path: Models/Car.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: CreatedDate
     path: Models/Car.cs
     startLine: 44
@@ -220,7 +220,7 @@ items:
     remote:
       path: Models/Car.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: SoldDate
     path: Models/Car.cs
     startLine: 51
@@ -252,7 +252,7 @@ items:
     remote:
       path: Models/Car.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: Part
     path: Models/Car.cs
     startLine: 58

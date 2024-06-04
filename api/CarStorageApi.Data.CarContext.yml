@@ -19,7 +19,7 @@ items:
     remote:
       path: Migrations/DBcontext.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: CarContext
     path: Migrations/DBcontext.cs
     startLine: 5
@@ -110,7 +110,7 @@ items:
     remote:
       path: Migrations/DBcontext.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: Cars
     path: Migrations/DBcontext.cs
     startLine: 7
@@ -139,7 +139,7 @@ items:
     remote:
       path: Migrations/DBcontext.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: Parts
     path: Migrations/DBcontext.cs
     startLine: 8
@@ -168,7 +168,7 @@ items:
     remote:
       path: Migrations/DBcontext.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: .ctor
     path: Migrations/DBcontext.cs
     startLine: 9

@@ -19,7 +19,7 @@ items:
     remote:
       path: Migrations/20240430113507_addedPartDescription.Designer.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: addedPartDescription
     path: Migrations/20240430113507_addedPartDescription.Designer.cs
     startLine: 13
@@ -84,7 +84,7 @@ items:
     remote:
       path: Migrations/20240430113507_addedPartDescription.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: Up
     path: Migrations/20240430113507_addedPartDescription.cs
     startLine: 10
@@ -128,7 +128,7 @@ items:
     remote:
       path: Migrations/20240430113507_addedPartDescription.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: Down
     path: Migrations/20240430113507_addedPartDescription.cs
     startLine: 51
@@ -174,7 +174,7 @@ items:
     remote:
       path: Migrations/20240430113507_addedPartDescription.Designer.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: BuildTargetModel
     path: Migrations/20240430113507_addedPartDescription.Designer.cs
     startLine: 18

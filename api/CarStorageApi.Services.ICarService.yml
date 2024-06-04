@@ -17,7 +17,7 @@ items:
     remote:
       path: Services/ICarService.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: ICarService
     path: Services/ICarService.cs
     startLine: 7
@@ -44,7 +44,7 @@ items:
     remote:
       path: Services/ICarService.cs
       branch: main
-      repo: https://github.com/Ceazer101/BilLagerAPI.git
+      repo: https://github.com/dls-electradrive/CarStorageAPI.git
     id: GetCars
     path: Services/ICarService.cs
     startLine: 13
